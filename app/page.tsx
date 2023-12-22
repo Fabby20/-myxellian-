@@ -7,7 +7,7 @@ import PropertyOverview from './components/PropertyOverview';
 export default function Home() {
   return (
    <>
-   <Box px={20} my={10}>
+   <Box px={{base: 2, md: 20}} my={10}>
     <HStack spacing={3} display={"inline-flex"}>
           <Image aria-label='Search database' boxSize='30px' src="/icons/hand.svg" />
           <Text fontSize='lg' fontWeight="bold">Hi Ahmed</Text>

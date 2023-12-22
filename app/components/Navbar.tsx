@@ -49,7 +49,7 @@ export default function Navbar(){
         borderColor="gray.600"
         borderBottomWidth={1}
         w="full"
-        px={{ base: 2, sm: 20 }}
+        px={{ base: 2, md: 20 }}
         py={4}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
@@ -128,7 +128,7 @@ export default function Navbar(){
             
 
             <Avatar
-                marginLeft={10}
+                marginLeft={{base: 2, md: 10}}
               size="sm"
               name="Dan Abrahmov"
               src="/icons/person.svg"
@@ -140,7 +140,7 @@ export default function Navbar(){
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        px={20}
+        px={{ base: 2, md: 20}}
         borderWidth={0}
         overflowX="auto"
         bgColor="white"
