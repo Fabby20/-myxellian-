@@ -1,95 +1,115 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client';
+import { Link } from '@chakra-ui/next-js'
+import { Box, Container, Flex, Grid, GridItem, HStack, Image, SimpleGrid, Text } from '@chakra-ui/react';
+import SalesOverview from './components/SalesOverview';
+import PropertyOverview from './components/PropertyOverview';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+   <>
+   <Box px={20} my={10}>
+    <HStack spacing={3} display={"inline-flex"}>
+          <Image aria-label='Search database' boxSize='30px' src="/icons/hand.svg" />
+          <Text fontSize='lg' fontWeight="bold">Hi Ahmed</Text>
+      </HStack>
+      <Text fontSize='xs'>Welcome to your Dashboard</Text>
+    </Box>
+    <Flex flexDirection='column' px={20}>
+    {/* <Grid
+      h='200px'
+      templateRows='repeat(2, 1fr)'
+      templateColumns='repeat(5, 1fr)'
+      gap={4}
+    >
+      <GridItem colSpan={3} rowSpan={2} bg='tomato'>
+      <SalesOverview
+          title={"Built by Developers"}
+          name={"Purity UI Dashboard"}
+          description={
+            "From colors, cards, typography to complex elements, you will find the full documentation."
+          }
+          
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </GridItem>
+      <GridItem colSpan={2} bg='papayawhip'>
+          <PropertyOverview
+              title={"Work with the rockets"}
+              description={
+                "Wealth creation is a revolutionary recent positive-sum game. It is all about who takes the opportunity first."
+              }
+          />
+      </GridItem>
+      <GridItem colSpan={2} bg='tomato'>
+      <PropertyOverview
+              title={"Work with the rockets"}
+              description={
+                "Wealth creation is a revolutionary recent positive-sum game. It is all about who takes the opportunity first."
+              }
+          />
+      </GridItem>
+    </Grid> */}
+    {/* <Grid
+        templateColumns={{ md: "1fr", lg: "1.8fr 1.2fr" }}
+        templateRows={{ md: "1fr auto", lg: "1fr" }}
+        my='26px'
+        gap='24px'>
+        <SalesOverview
+          title={"Built by Developers"}
+          name={"Purity UI Dashboard"}
+          description={
+            "From colors, cards, typography to complex elements, you will find the full documentation."
+          }
+          
+        />
+        <GridItem colSpan={2} bg='tomato'>
+          <PropertyOverview
+              title={"Work with the rockets"}
+              description={
+                "Wealth creation is a revolutionary recent positive-sum game. It is all about who takes the opportunity first."
+              }
+          />
+        </GridItem>
+        <GridItem colSpan={2} bg='tomato'>
+          <PropertyOverview
+              title={"Work with the rockets"}
+              description={
+                "Wealth creation is a revolutionary recent positive-sum game. It is all about who takes the opportunity first."
+              }
+          />
+        </GridItem>
+        <SimpleGrid columns={2} spacing={10}>
+          <PropertyOverview
+            title={"Work with the rockets"}
+            description={
+              "Wealth creation is a revolutionary recent positive-sum game. It is all about who takes the opportunity first."
+            }
+          />
+          <PropertyOverview
+            title={"Work with the rockets"}
+            description={
+              "Wealth creation is a revolutionary recent positive-sum game. It is all about who takes the opportunity first."
+            }
+          />
+        </SimpleGrid>
+        
+      </Grid> */}
+      {/* <Grid
+        templateColumns={{ sm: "1fr", md: "1fr 1fr", lg: "2fr 1fr" }}
+        templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
+        gap='24px'>
+        <Projects
+          title={"Projects"}
+          amount={30}
+          captions={["Companies", "Members", "Budget", "Completion"]}
+          data={dashboardTableData}
+        />
+        <OrdersOverview
+          title={"Orders Overview"}
+          amount={30}
+          data={timelineData}
+        />
+      </Grid> */}
+    </Flex>
+   </>
   )
 }
